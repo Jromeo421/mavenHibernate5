@@ -5,12 +5,17 @@
  */
 package com.hibernatetake5.mavenhibernate5;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 /**
  *
  * @author JRome
  */
+@Entity
 public class Clients {
     
+    @Id
     private int id;
     private String client_name;
     private int phone_number;

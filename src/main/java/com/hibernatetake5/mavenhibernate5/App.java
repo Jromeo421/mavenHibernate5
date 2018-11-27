@@ -1,5 +1,10 @@
 package com.hibernatetake5.mavenhibernate5;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
 /**
  * Hello world!
  *
@@ -18,5 +23,17 @@ public class App {
        hibernate.setEmail_address("jromeo421@gmail.com");
        hibernate.setDate_of_birth("4-21-83");
        
+       Configuration con = new Configuration().configure();
+       
+        SessionFactory sf = con.buildSessionFactory();
+        
+        Session session = sf.openSession();
+        
+        Transaction tx = session.beginTransaction();
+        
+        session.save(hibernate);
+        
+        tx.commit();
+        
     }
 }
