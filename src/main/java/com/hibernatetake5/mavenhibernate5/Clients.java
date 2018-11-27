@@ -20,7 +20,7 @@ public class Clients implements Serializable {
     
     @Id
     private int id;
-    private Client_fullName client_fullName;
+    private fullName fullName;
     private String phone_number;
     private String appointment_date;
     private int price;
@@ -36,14 +36,13 @@ public class Clients implements Serializable {
         this.id = id;
     }
 
-    public Client_fullName getClient_fullName() {
-        return client_fullName;
+    public fullName getFullName() {
+        return fullName;
     }
 
-    public void setClient_fullName(Client_fullName client_fullName) {
-        this.client_fullName = client_fullName;
+    public void setFullName(fullName fullName) {
+        this.fullName = fullName;
     }
-
 
     public String getPhone_number() {
         return phone_number;
@@ -95,8 +94,9 @@ public class Clients implements Serializable {
 
     @Override
     public String toString() {
-        return "Clients{" + "id=" + id + ", client_name=" + client_name + ", phone_number=" + phone_number + ", appointment_date=" + appointment_date + ", price=" + price + ", discounts=" + discounts + ", email_address=" + email_address + ", date_of_birth=" + date_of_birth + '}';
+        return "Clients{" + "id=" + id + ", fullName=" + fullName + ", phone_number=" + phone_number + ", appointment_date=" + appointment_date + ", price=" + price + ", discounts=" + discounts + ", email_address=" + email_address + ", date_of_birth=" + date_of_birth + '}';
     }
+
     
-}
+    }
     

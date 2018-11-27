@@ -14,11 +14,12 @@ import javax.persistence.Embeddable;
  */
 
 @Embeddable
-public class Client_fullName implements Serializable {
+public class fullName implements Serializable {
     
     private String fname;
-    private String lname;
     private String mname;
+    private String lname;
+    
 
     public String getFname() {
         return fname;
@@ -26,6 +27,16 @@ public class Client_fullName implements Serializable {
 
     public void setFname(String fname) {
         this.fname = fname;
+    }
+
+    
+
+    public String getMname() {
+        return mname;
+    }
+
+    public void setMname(String mname) {
+        this.mname = mname;
     }
 
     public String getLname() {
@@ -36,20 +47,10 @@ public class Client_fullName implements Serializable {
         this.lname = lname;
     }
 
-    public String getMname() {
-        return mname;
-    }
-
-    public void setMname(String mname) {
-        this.mname = mname;
-    }
-
     @Override
     public String toString() {
-        return "Client_fullName{" + "fname=" + fname + ", lname=" + lname + ", mname=" + mname + '}';
+        return "fullName{" + "fname=" + fname + ", mname=" + mname + ", lname=" + lname + '}';
     }
     
-   
     
-    
-}
+    }

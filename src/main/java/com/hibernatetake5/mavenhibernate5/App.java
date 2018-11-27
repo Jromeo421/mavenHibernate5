@@ -15,14 +15,14 @@ public class App {
     
     public static void main(String[] args)
     {
-        Client_fullName cfn = new Client_fullName();
+        fullName cfn = new fullName();
         cfn.setFname("Jerome");
         cfn.setMname("Jamar");
         cfn.setLname("Hugh");
         
        Clients hibernate = new Clients();
        hibernate.setId(101);
-       hibernate.setClient_fullName(cfn);
+       hibernate.setFullName(cfn);
        hibernate.setPhone_number("8015576053");
        hibernate.setAppointment_date("12-03-18");
        hibernate.setPrice(65);
