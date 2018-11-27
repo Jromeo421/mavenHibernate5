@@ -5,6 +5,7 @@
  */
 package com.hibernatetake5.mavenhibernate5;
 
+import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -13,12 +14,12 @@ import javax.persistence.Id;
  * @author JRome
  */
 @Entity
-public class Clients {
+public class Clients implements Serializable {
     
     @Id
     private int id;
     private String client_name;
-    private double phone_number;
+    private String phone_number;
     private String appointment_date;
     private int price;
     private int discounts;
@@ -41,11 +42,11 @@ public class Clients {
         this.client_name = client_name;
     }
 
-    public int getPhone_number() {
+    public String getPhone_number() {
         return phone_number;
     }
 
-    public void setPhone_number(double phone_number) {
+    public void setPhone_number(String phone_number) {
         this.phone_number = phone_number;
     }
 
