@@ -87,17 +87,6 @@ public class Clients {
 
     public void setDate_of_birth(String date_of_birth) {
         this.date_of_birth = date_of_birth;
-    }
-
-    void setPhone_number(String string) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    void setPrice(String string) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
-    
-    
-    
+    }   
 }
