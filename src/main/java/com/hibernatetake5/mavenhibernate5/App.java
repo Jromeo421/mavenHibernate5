@@ -15,15 +15,22 @@ public class App {
     
     public static void main(String[] args)
     {
+        Client_fullName cfn = new Client_fullName();
+        cfn.setFname("Jerome");
+        cfn.setMname("Jamar");
+        cfn.setLname("Hugh");
+        
        Clients hibernate = new Clients();
        hibernate.setId(101);
-       hibernate.setClient_name("Jamie Hugh");
+       hibernate.setClient_fullName(cfn);
        hibernate.setPhone_number("8015576053");
        hibernate.setAppointment_date("12-03-18");
        hibernate.setPrice(65);
        hibernate.setDiscounts(0);
        hibernate.setEmail_address("jromeo421@gmail.com");
        hibernate.setDate_of_birth("4-21-83");
+       
+       
        
        Configuration con = new Configuration().configure().addAnnotatedClass(Clients.class);
        
@@ -35,9 +42,10 @@ public class App {
         
         Transaction tx = session.beginTransaction();
         
-        session.save(hibernate);
+       session.save(hibernate);
         
         tx.commit();
         
+        System.out.println(hibernate);
     }
 }
