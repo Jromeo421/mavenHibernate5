@@ -18,7 +18,7 @@ public class Clients {
     @Id
     private int id;
     private String client_name;
-    private int phone_number;
+    private double phone_number;
     private String appointment_date;
     private int price;
     private int discounts;
@@ -45,7 +45,7 @@ public class Clients {
         return phone_number;
     }
 
-    public void setPhone_number(int phone_number) {
+    public void setPhone_number(double phone_number) {
         this.phone_number = phone_number;
     }
 
