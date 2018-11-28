@@ -8,60 +8,20 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 import org.hibernate.service.ServiceRegistryBuilder;
 
-/**
- * Hello world!
- *
- */
 public class App {
     
     public static void main(String[] args)
     {
-       fullName cfn = new fullName();
-       phoneNumber pum = new phoneNumber();
-       Clients hibernate = new Clients();
-       appointmentDate apd = new appointmentDate();
-       discountCode dc = new discountCode();
-       
-       hibernate.setId(101);
-       hibernate.setClient_name(cfn);
-       hibernate.setPhone_number(pum);
-       hibernate.setAppointment_date(apd);
-       hibernate.setPrice(65);
-       hibernate.setDiscounts(dc);
-       hibernate.setEmail_address("jromeo421@gmail.com");
-       hibernate.setDate_of_birth("4-21-83");
-       
-       hibernate.setEmail_address("jromeo421@gmail.com");
-       hibernate.setDate_of_birth("4-21-83");
-       
-       Scanner discountCode = new Scanner (System.in);
-       System.out.println("What is your discount code( if null put none)?");
-       String discounts = discountCode.nextLine();
-       dc.setDiscountCode(discounts);
-       
-       Scanner first = new Scanner (System.in);
-       System.out.println("What is your first name?");
-       String fname = first.nextLine();
-       cfn.setFname(fname);
-       
-       Scanner middle = new Scanner (System.in);
-       System.out.println("What is your middle name?");
-       String mname = middle.nextLine();
-       cfn.setMname(mname);
-       
-       Scanner last = new Scanner (System.in);
-       System.out.println("What is your last name?");
-       String lname = last.nextLine();
-       cfn.setLname(lname);
-              
-       Scanner appointment = new Scanner (System.in);
-       System.out.println("\nWhat date do you want to schedule for an appointment?");
-       System.out.println("\nAppointments are scheduled during normal business hours");
-       String appointmentDate = appointment.nextLine();
-       apd.setAppointmentDate(appointmentDate);   
-       
-       
-       Configuration con = new Configuration().configure().addAnnotatedClass(Clients.class);
+       clientInfo hibernateObject = new clientInfo(); 
+       hibernateObject.setClientid(101);
+       hibernateObject.setPhoneNumber("(801)557-6053");
+       hibernateObject.setAppointment_date("12-03-18");
+       hibernateObject.setDiscountCode("none");
+       hibernateObject.setDate_of_birth("4-21-1983");
+       hibernateObject.setFullName("Jamie Lynne Hugh");
+       hibernateObject.setEmail_address("Savvyandsassyboutique@gmail.com");
+       hibernateObject.setServicePrice(65);
+       Configuration con = new Configuration().configure().addAnnotatedClass(clientInfo.class);
        
        @SuppressWarnings("deprecation")
         ServiceRegistry reg = new ServiceRegistryBuilder().applySettings(con.getProperties()).buildServiceRegistry();
@@ -72,10 +32,10 @@ public class App {
         
         Transaction tx = session.beginTransaction();
         
-       session.save(hibernate);
+       session.save(hibernateObject);
         
         tx.commit();
         
-        System.out.println(hibernate);
+        System.out.println(hibernateObject);
     }
 }

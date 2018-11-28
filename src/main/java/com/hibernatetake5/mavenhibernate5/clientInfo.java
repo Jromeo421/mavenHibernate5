@@ -16,31 +16,31 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name="Clients")
-public class Clients implements Serializable {
+public class clientInfo implements Serializable {
     
     @Id
-    private int id;
-    private fullName fullName;
+    private int Clientid;
+    private String fullName;
     private String phoneNumber;
     private String appointment_date;
-    private int price;
-    private String discounts;
+    private int servicePrice;
+    private String discountCode;
     private String email_address;
     private String date_of_birth;   
 
-    public int getId() {
-        return id;
+    public int getClientid() {
+        return Clientid;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setClientid(int Clientid) {
+        this.Clientid = Clientid;
     }
 
-    public fullName getFullName() {
+    public String getFullName() {
         return fullName;
     }
 
-    public void setFullName(fullName fullName) {
+    public void setFullName(String fullName) {
         this.fullName = fullName;
     }
 
@@ -60,20 +60,28 @@ public class Clients implements Serializable {
         this.appointment_date = appointment_date;
     }
 
-    public int getPrice() {
-        return price;
+    public int getServicePrice() {
+        return servicePrice;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
+    public void setServicePrice(int servicePrice) {
+        this.servicePrice = servicePrice;
+    }
+
+    public String getDiscountCode() {
+        return discountCode;
+    }
+
+    public void setDiscountCode(String discountCode) {
+        this.discountCode = discountCode;
     }
 
     public String getDiscounts() {
-        return discounts;
+        return discountCode;
     }
 
-    public void setDiscounts(String discounts) {
-        this.discounts = discounts;
+    public void setDiscounts(String discountCode) {
+        this.discountCode = discountCode;
     }
 
     public String getEmail_address() {
@@ -94,11 +102,7 @@ public class Clients implements Serializable {
 
     @Override
     public String toString() {
-        return "Clients{" + "id=" + id + ", fullName=" + fullName + ", phoneNumber=" + phoneNumber + ", appointment_date=" + appointment_date + ", price=" + price + ", discounts=" + discounts + ", email_address=" + email_address + ", date_of_birth=" + date_of_birth + '}';
-    }
-
-    void setPhone_number(String string) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return "clientInfo{" + "Clientid=" + Clientid + ", fullName=" + fullName + ", phoneNumber=" + phoneNumber + ", appointment_date=" + appointment_date + ", price=" + servicePrice + ", discounts=" + discountCode + ", email_address=" + email_address + ", date_of_birth=" + date_of_birth + '}';
     }
 }
     
