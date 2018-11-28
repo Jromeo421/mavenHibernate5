@@ -21,10 +21,10 @@ public class Clients implements Serializable {
     @Id
     private int id;
     private fullName fullName;
-    private String phone_number;
+    private String phoneNumber;
     private String appointment_date;
     private int price;
-    private int discounts;
+    private String discounts;
     private String email_address;
     private String date_of_birth;   
 
@@ -44,12 +44,12 @@ public class Clients implements Serializable {
         this.fullName = fullName;
     }
 
-    public String getPhone_number() {
-        return phone_number;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setPhone_number(String phone_number) {
-        this.phone_number = phone_number;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public String getAppointment_date() {
@@ -68,11 +68,11 @@ public class Clients implements Serializable {
         this.price = price;
     }
 
-    public int getDiscounts() {
+    public String getDiscounts() {
         return discounts;
     }
 
-    public void setDiscounts(int discounts) {
+    public void setDiscounts(String discounts) {
         this.discounts = discounts;
     }
 
@@ -94,9 +94,11 @@ public class Clients implements Serializable {
 
     @Override
     public String toString() {
-        return "Clients{" + "id=" + id + ", fullName=" + fullName + ", phone_number=" + phone_number + ", appointment_date=" + appointment_date + ", price=" + price + ", discounts=" + discounts + ", email_address=" + email_address + ", date_of_birth=" + date_of_birth + '}';
+        return "Clients{" + "id=" + id + ", fullName=" + fullName + ", phoneNumber=" + phoneNumber + ", appointment_date=" + appointment_date + ", price=" + price + ", discounts=" + discounts + ", email_address=" + email_address + ", date_of_birth=" + date_of_birth + '}';
     }
 
-    
+    void setPhone_number(String string) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+}
     

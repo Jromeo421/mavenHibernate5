@@ -29,8 +29,6 @@ public class fullName implements Serializable {
         this.fname = fname;
     }
 
-    
-
     public String getMname() {
         return mname;
     }
